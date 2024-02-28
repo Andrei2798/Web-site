@@ -2,7 +2,7 @@ import { usersRepository } from "./usersRepository.js";
 localStorage.clear();
 
 const baseUrl = window.location.origin; // Получаем доменное имя, например, "https://example.com"
-const absoluteUrl = baseUrl + "/path/to/file"; // Добавляем путь к файлу к домену
+const absoluteUrl = baseUrl + "/index.html"; // Добавляем путь к файлу к домену
 
 function logIn(event) {
   event.preventDefault();
