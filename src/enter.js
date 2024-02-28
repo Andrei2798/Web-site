@@ -1,5 +1,6 @@
 import { usersRepository } from "./usersRepository.js";
 localStorage.clear();
+
 function logIn(event) {
   event.preventDefault();
   let name = document.querySelector("#name").value;
@@ -16,7 +17,8 @@ function logIn(event) {
           // Пользователь найден, аутентификация успешна
           userFound = true;
           localStorage.setItem("isAuthorithed", 1);
-          window.location.href = "index.html"; // Пример перехода на главную страницу
+          // Используем доменное имя для перенаправления на главную страницу
+          window.location.href = window.location.origin + "/index.html";
         }
       });
 
