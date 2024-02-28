@@ -38,7 +38,7 @@ addUserForm.addEventListener("submit", async (e) => {
   passwordInput.value = "";
 
   // Переходим на страницу index.html
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 });
 
 // Обработчик события для кнопки отображения списка пользователей
