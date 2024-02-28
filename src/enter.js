@@ -1,6 +1,9 @@
 import { usersRepository } from "./usersRepository.js";
 localStorage.clear();
 
+const baseUrl = window.location.origin; // Получаем доменное имя, например, "https://example.com"
+const absoluteUrl = baseUrl + "/path/to/file"; // Добавляем путь к файлу к домену
+
 function logIn(event) {
   event.preventDefault();
   let name = document.querySelector("#name").value;
@@ -18,7 +21,7 @@ function logIn(event) {
           userFound = true;
           localStorage.setItem("isAuthorithed", 1);
           // Используем относительный путь для перенаправления на главную страницу
-          window.location.href = "..index.html";
+          window.location.href = baseUrl + "/index.html";
         }
       });
 
