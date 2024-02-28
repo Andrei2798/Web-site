@@ -17,8 +17,8 @@ function logIn(event) {
           // Пользователь найден, аутентификация успешна
           userFound = true;
           localStorage.setItem("isAuthorithed", 1);
-          // Используем доменное имя для перенаправления на главную страницу
-          window.location.href = window.location.origin + "/index.html";
+          // Используем относительный путь для перенаправления на главную страницу
+          window.location.href = "..index.html";
         }
       });
 
